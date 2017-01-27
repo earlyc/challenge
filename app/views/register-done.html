@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 ng-show="submitted" class="panel-title">Thank You For Registering!</h3>
+      <h3 ng-show="!submitted" class="panel-title">Registration Error</h3>
+  </div>
+  <div class="panel-body">
+
+    <p ng-show="submitted">Thank you, we have recieved your team registration. If you have any questions about the challenge, or how to prepare, please don't hesitate to <a ui-sref="contact">contact us</a>.</p>
+    <p ng-show="!submitted">There seems to be an error with your registration. Please click 'Register' at the top of the screen, and try your registration again. If you continue to have problems, please <a ui-sref="contact">contact us</a>.</p>
+
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="page-header">
+            <h1>Team Registration</h1>
+
+            <!-- the links to our nested states using relative paths -->
+            <!-- add the active class if the state matches our ui-sref -->
+            <div id="status-buttons" class="text-center">
+                <a ui-sref-active="active" ui-sref=".one"><span>1</span> General Info</a>
+                <a ui-sref-active="active" ui-sref=".two" ng-click="next(1)"><span>2</span> Team Info</a>
+                <a ui-sref-active="active" ui-sref=".three" ng-click="next(2)"><span>3</span> Team Members</a>
+                <a ui-sref-active="active" ui-sref=".four" ng-click="next(3)"><span>4</span> Confirm</a>
+            </div>
+        </div>
+
+    <!-- use ng-submit to catch the form submission -->
+    <form name="registerForm" ng-submit="processForm()">
+
+        <!-- our nested state views will be injected here -->
+        <div id="form-views" ui-view></div>
+      </form>
+
+    <!-- show our formData as it is being typed
+    <pre>
+        {{ formData }}
+    </pre>
+
+    <pre>
+        {{ teamMembers }}
+    </pre>
+    <pre>
+    <tt>isValid = {{validator.isValid()}}</tt><br />
+    <tt>registerForm.$valid = {{registerForm.$valid}}</tt><br />
+    <tt>registerForm.register-one.$valid = {{registerForm.register-one.$valid}}, {{validator.one}}</tt><br />
+    <tt>registerForm.register-two.$valid = {{registerForm.register-two.$valid}}, {{validator.two}}</tt><br />
+    <tt>registerForm.register-three.$valid = {{registerForm.register-three.$valid}}, {{validator.three}}</tt><br />
+  </pre>-->

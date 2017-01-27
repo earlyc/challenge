@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Team Information</h3>
+  </div>
+  <div class="panel-body">
+    <div ng-form name="register-two">
+    <div class="form-group">
+        <label for="sponsorName">Name of Faculty Sponsor</label>
+        <input type="text" class="form-control" id="sponsorName" required ng-model="formData.sponsorName" placeholder="Faculty Sponsor">
+    </div>
+    <div class="form-group">
+        <label for="sponsorEmail">Email of Faculty Sponsor</label>
+        <input type="email" class="form-control" id="sponsorEmail" required ng-model="formData.sponsorEmail" placeholder="Faculty Email">
+        <p ng-show="register-two.sponsorEmail.$invalid || register-two.sponsorEmail.$dirty">
+  A valid email address is required
+</p>
+    </div>
+    <div class="form-group">
+        <label for="primaryCampus">Primary Campus</label>
+        <input type="text" class="form-control" id="primaryCampus" required ng-model="formData.primaryCampus" placeholder="Primary Campus">
+    </div>
+    <div class="form-group">
+        <label for="teamSize">Team Size</label>
+        <br />
+        <label class="radio-inline"><input type="radio" value="2" required ng-model="formData.teamSize" name="teamSize">2</label>
+        <label class="radio-inline"><input type="radio" value="3" required ng-model="formData.teamSize" name="teamSize">3</label>
+        <label class="radio-inline"><input type="radio" value="4" required ng-model="formData.teamSize" name="teamSize">4</label>
+    </div>
+    <a ui-sref="register.three" ng-disabled="!registerForm.$valid" ng-click="next(2)" class="btn btn-primary">Final Step <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+</div>
+  </div>
+</div>

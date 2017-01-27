@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Please verify the following:</h3>
+  </div>
+  <div class="panel-body">
+
+    <h4>Team Information</h4>
+
+    <strong>Team Name:</strong>  {{formData.teamName}}<br />
+
+    <strong>Team Level:</strong>  {{formData.teamLevel}}<br />
+
+    <strong>Primary Campus:</strong>  {{formData.primaryCampus}}<br />
+
+    <strong>Faculty Sponsor:</strong>  {{formData.sponsorName}}<br />
+
+    <strong>Faculty Sponsor Email:</strong>  {{formData.sponsorEmail}}<br />
+
+    <div ng-repeat="teamMember in teamMembers">
+
+      <h4>Team Member {{teamMember.id}}</h4>
+
+      <strong>Name:</strong>  {{teamMember.name}}<br />
+
+      <strong>Grade Level:</strong>  {{teamMember.grade}}<br />
+
+      <strong>Email:</strong>  {{teamMember.email}}<br />
+
+      <strong>Phone:</strong>  {{teamMember.phone}}<br />
+
+      <strong>T-Shirt Size:</strong>  {{teamMember.shirt}}<br />
+
+    </div><br />
+
+    <div ng-show="!validator.isValid()" class="well well-sm">It appears that one or more values have not been properly filled out. Please check each page of the form to ensure that everything is correct.</div>
+
+    <button type="submit" ng-disabled="!validator.isValid()" class="btn btn-primary">Submit Registration&nbsp&nbsp<span class="glyphicon glyphicon-ok"></span></button>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Team Members</h3>
+  </div>
+  <div class="panel-body">
+    <div ng-form name="register-three">
+    <div class="form-group" ng-repeat="teamMember in teamMembers">
+      <h4>Team Member {{teamMember.id}}</h4>
+        <input type="text" class="form-control" required ng-model="teamMember.name" id="memberName{{teamMember.id}}" placeholder="Full Name"><br />
+        <input type="email" class="form-control" required ng-model="teamMember.email" id="memberEmail{{teamMember.id}}" placeholder="Email Address"><br />
+        <input type="tel" class="form-control" required ng-model="teamMember.phone" id="memberPhone{{teamMember.id}}" placeholder="Phone Number"><br />
+
+        <select name="grade{{teamMember.id}}" class="form-control" ng-model="teamMember.grade" required>
+          <option style="display:none" value="">Select your grade level...</option>
+		      <option value="7">7</option>
+		      <option value="8">8</option>
+		      <option value="9">9</option>
+		      <option value="10">10</option>
+		      <option value="11">11</option>
+		      <option value="12">12</option>
+		      <option value="13">13 (College Freshman)</option>
+	        <option value="14">14 (College Sophomore)</option>
+		      <option value="15">15 (College Junior)</option>
+		      <option value="16">16 (College Senior)</option>
+        </select><br />
+
+        <select name="shirt{{teamMember.id}}" class="form-control" ng-model="teamMember.shirt" required>
+          <option style="display:none" value="">Select your T-shirt size...</option>
+		      <option value="xs">XS</option>
+		      <option value="s">S</option>
+		      <option value="m">M</option>
+		      <option value="l">L</option>
+		      <option value="xl">XL</option>
+        </select>
+
+    </div>
+    <a ui-sref="register.four" ng-disabled="!registerForm.$valid" ng-click="next(3)" class="btn btn-primary">Review & Submit <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
+  </div>
+</div>
+</div>
